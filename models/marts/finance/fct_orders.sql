@@ -1,7 +1,7 @@
-select p.order_id, 
-customer_id, 
+select o.order_id, 
+o.customer_id, 
 p.amount
 
-from {{ ref('stg_stripe__payments') }} p
-left join {{ ref('stg_jaffle_shop__orders') }} o
-on p.order_id = o.order_id
+from {{ ref('stg_jaffle_shop__orders') }} o
+left join {{ ref('stg_stripe__payments') }} p
+on o.order_id = p.order_id

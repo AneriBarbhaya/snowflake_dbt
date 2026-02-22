@@ -4,4 +4,4 @@ p.amount
 
 from {{ ref('stg_jaffle_shop__orders') }} o
 left join {{ ref('stg_stripe__payments') }} p
-on o.order_id = p.order_id
+on o.order_id = p.orderid

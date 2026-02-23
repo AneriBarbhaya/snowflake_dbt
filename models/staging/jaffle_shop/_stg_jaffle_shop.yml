@@ -15,7 +15,7 @@ models:
           - unique
           - not_null
       - name: status
-        description: order status
+        description: "{{ doc('order_status') }}"
         data_tests:
           - accepted_values:
               arguments:

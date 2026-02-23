@@ -2,8 +2,10 @@ sources:
   - name: jaffle_shop # this is the source_name
     database: raw
     schema: jaffle_shop
+    description: clone of postgres db application
     tables:
       - name: customers 
+        description: Raw customer data
         columns:
           - name: id
             description: primary key
@@ -12,6 +14,7 @@ sources:
               - not_null  
                 
       - name: orders
+        description: Raw order data
         config: 
           freshness:
             warn_after:

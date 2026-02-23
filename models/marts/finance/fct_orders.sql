@@ -1,6 +1,8 @@
 {{
     config(
-        materialized='incremental'
+        materialized='incremental',
+        unique_id = 'order_id',
+        incremental_strategy = 'merge'
     )
 }}
 
